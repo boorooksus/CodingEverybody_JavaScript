@@ -1,0 +1,2 @@
+html과 javaScript의 차이점:
+javaScript는 시간 순서, 조건에 따른 명령 가능 

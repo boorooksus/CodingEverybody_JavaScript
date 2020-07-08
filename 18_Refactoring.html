@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>web</h1>
+    <input type="button" value="night" onclick="
+      var target = document.querySelector('body')
+      if (this.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+      }
+      else{
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+      }
+    ">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <input type="button" value="night" onclick="
+      if (this.value === 'night'){
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        this.value = 'day';
+      }
+      else{
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        this.value = 'night';
+      }
+    ">
+  </body>
+</html>
+
+
+<!--
+  9-21, 25-36:
+
+    1) night/day 버튼 2개 구현할 때,
+    <input id="night_day" type="button" value="night" onclick="...
+    이렇게 쓰고 복붙하면 아래쪽 버튼은 구현 안됨(querySelector는 해당 태그 중 하나만 가져옴)
+    -> 아래쪽 버튼은 id를 다르게 해야함
+    ex)
+      <input id="night_day2" type="button" value="night" onclick="...
+
+    2) 9, 10: 굳이 id 만들고 document.querySelector(#id).value 쓸 필요 없이 id 생략하고 document.que~ 대신 this 쓰면 됨
+
+    3) 10, 12, 13: 'document.querySelector('body')' 이 부분이 계속 중복됨 -> 이 부분을 'target'이라는 변수로 만들고 사용
+-->
