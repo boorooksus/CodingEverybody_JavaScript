@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      var coworkers = {
+        "programmer":"abc",
+        "designer":"def"
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Object Oriented Programming</h1>
+    <script>
+      document.write("programmer: " + coworkers.programmer + "<br>");
+      coworkers.bookkeeper = "hij";
+      document.write("bookkeeper: " + coworkers.bookkeeper + "<br>");
+      coworkers["data scientist"] = "klm";
+      document.write("data scientist: " + coworkers["data scientist"] + "<br>");
+    </script>
+      <h1>Iteration</h1>
+    <script>
+      for(var key in coworkers){
+        document.write(key + ":   ");
+        document.write(coworkers[key] + "<br>");
+      }
+    </script>
+  </body>
+</html>
+
+<!--
+  24-27: 반복문을 이용하여 객체 원소 사용
+  25: 객체 내 원소
+  26: 객체 내 원소의 값
+-->
